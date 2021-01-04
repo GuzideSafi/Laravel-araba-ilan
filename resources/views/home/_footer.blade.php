@@ -1,5 +1,3 @@
-
-<!-- FOOTER -->
 <footer id="footer">
     <div class="container">
         <div class="row">
@@ -7,7 +5,7 @@
             <div class="col-md-4 col-sm-6">
                 <div class="footer-info">
                     <div class="section-title">
-                        <h2>ARABA</h2>
+                        <h2>Headquarter</h2>
                     </div>
                     <address>
                         <p>212 Barrington Court <br>New York, ABC 10001</p>
@@ -20,7 +18,7 @@
                     </ul>
 
                     <div class="copyright-text">
-                        <p>Copyright &copy; 2020 Company Name</p>
+                        <p>Copyright &copy; 2021 Güzide SAFİ</p>
                         <p>Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></p>
                     </div>
                 </div>
@@ -70,8 +68,8 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="{{asset('assets/js/jquery.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('assets/js/smoothscroll.js')}}"></script>
-<script src="{{asset('assets/js/custom.js')}}"></script>
+<script src="{{asset('assets')}}/js/jquery.js"></script>
+<script src="{{asset('assets')}}/js/bootstrap.min.js"></script>
+<script src="{{asset('assets')}}/js/owl.carousel.min.js"></script>
+<script src="{{asset('assets')}}/js/smoothscroll.js"></script>
+<script src="{{asset('assets')}}/js/custom.js"></script>

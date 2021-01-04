@@ -1,14 +1,12 @@
-<!-- resources/views/child.blade.php -->
-
 @extends('layouts.home')
 
-@section('title', 'Laravel Araba İlan Sitesi')
-@section('description')
-    Türkiyenin araç alım-satım platformu...
-@endsection
-    @section('keywords','Araç, Alım, Satım, 2.el, İkinciel')
+@section('title', 'Araba İlanı Sitesi')
 
-@include('home._slider')
+@section('description')
+    Araba İlanı Sitesi
+@endsection
+
+@section('keywords','car, araba, ilan')
 
 @section('content')
     <main>
@@ -41,8 +39,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/product-1-720x480.jpg')}}" class="img-responsive" alt="">
-
+                                    <img src="{{asset('assets')}}/images/product-1-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-dashboard"></i> 130 000km</span>
@@ -69,7 +66,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/product-2-720x480.jpg')}}" class="img-responsive" alt="">
+                                    <img src="{{asset('assets')}}/images/product-2-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-dashboard"></i> 130 000km</span>
@@ -96,7 +93,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/product-3-720x480.jpg')}}" class="img-responsive" alt="">
+                                    <img src="{{asset('assets')}}/images/product-3-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-dashboard"></i> 130 000km</span>
@@ -123,7 +120,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/product-4-720x480.jpg')}}" class="img-responsive" alt="">
+                                    <img src="{{asset('assets')}}/images/product-4-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-dashboard"></i> 130 000km</span>
@@ -150,7 +147,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/product-5-720x480.jpg')}}" class="img-responsive" alt="">
+                                    <img src="{{asset('assets')}}/images/product-5-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-dashboard"></i> 130 000km</span>
@@ -177,7 +174,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/product-6-720x480.jpg')}}" class="img-responsive" alt="">
+                                    <img src="{{asset('assets')}}/images/product-6-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-dashboard"></i> 130 000km</span>
@@ -216,7 +213,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/blog-1-720x480.jpg')}}" class="img-responsive" alt="">
+                                    <img src="{{asset('assets')}}/images/blog-1-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-user"></i> John Doe</span>
@@ -239,7 +236,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/blog-2-720x480.jpg')}}" class="img-responsive" alt="">
+                                    <img src="{{asset('assets')}}/images/blog-2-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-user"></i> John Doe</span>
@@ -262,7 +259,7 @@
                         <div class="courses-thumb courses-thumb-secondary">
                             <div class="courses-top">
                                 <div class="courses-image">
-                                    <img src="{{asset('assets/images/blog-3-720x480.jpg')}}" class="img-responsive" alt="">
+                                    <img src="{{asset('assets')}}/images/blog-3-720x480.jpg" class="img-responsive" alt="">
                                 </div>
                                 <div class="courses-date">
                                     <span title="Author"><i class="fa fa-user"></i> John Doe</span>
@@ -299,7 +296,7 @@
                             <div class="col-md-4 col-sm-4">
                                 <div class="item">
                                     <div class="tst-image">
-                                        <img src="{{asset('assets/images/tst-image-1-200x216.jpg')}}" class="img-responsive" alt="">
+                                        <img src="{{asset('assets')}}/images/tst-image-1-200x216.jpg" class="img-responsive" alt="">
                                     </div>
                                     <div class="tst-author">
                                         <h4>Jackson</h4>
@@ -319,7 +316,7 @@
                             <div class="col-md-4 col-sm-4">
                                 <div class="item">
                                     <div class="tst-image">
-                                        <img src="{{asset('assets/images/tst-image-2-200x216.jpg')}}" class="img-responsive" alt="">
+                                        <img src="{{asset('assets')}}/images/tst-image-2-200x216.jpg" class="img-responsive" alt="">
                                     </div>
                                     <div class="tst-author">
                                         <h4>Camila</h4>
@@ -337,7 +334,7 @@
                             <div class="col-md-4 col-sm-4">
                                 <div class="item">
                                     <div class="tst-image">
-                                        <img src="{{asset('assets/images/tst-image-3-200x216.jpg')}}" class="img-responsive" alt="">
+                                        <img src="{{asset('assets')}}/images/tst-image-3-200x216.jpg" class="img-responsive" alt="">
                                     </div>
                                     <div class="tst-author">
                                         <h4>Barbie</h4>
@@ -356,7 +353,7 @@
                             <div class="col-md-4 col-sm-4">
                                 <div class="item">
                                     <div class="tst-image">
-                                        <img src="{{asset('assets/images/tst-image-4-200x216.jpg')}}" class="img-responsive" alt="">
+                                        <img src="{{asset('assets')}}/images/tst-image-4-200x216.jpg" class="img-responsive" alt="">
                                     </div>
                                     <div class="tst-author">
                                         <h4>Andrio</h4>
@@ -407,12 +404,12 @@
 
                 <div class="col-md-6 col-sm-12">
                     <div class="contact-image">
-                        <img src="{{asset('assets/images/contact-1-600x400.jpg')}}" class="img-responsive" alt="Smiling Two Girls">
+                        <img src="{{asset('assets')}}/images/contact-1-600x400.jpg" class="img-responsive" alt="Smiling Two Girls">
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-
 @endsection
+

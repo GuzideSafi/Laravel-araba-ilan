@@ -1,4 +1,3 @@
-<!-- HOME -->
 <section id="home">
     <div class="row">
         <div class="owl-carousel owl-theme home-slider">
@@ -6,8 +5,8 @@
                 <div class="caption">
                     <div class="container">
                         <div class="col-md-6 col-sm-12">
-                            <h1>Güvenli araç alım satım.</h1>
-                            <h3>Geniş seçenekleriyle, istediğiniz araç avcunuzun içinde.</h3>
+                            <h1>Lorem ipsum dolor sit amet.</h1>
+                            <h3>Voluptas dignissimos esse, explicabo cum fugit eaque, perspiciatis quia ab nisi sapiente delectus eiet.</h3>
                             <a href="cars.html" class="section-btn btn btn-default">Browse Cars</a>
                         </div>
                     </div>

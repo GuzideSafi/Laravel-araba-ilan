@@ -16,7 +16,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="./user.html">
+                <a class="nav-link" href="{{route('admin_category')}}">
                     <i class="material-icons">person</i>
                     <p>Kategoriler</p>
                 </a>

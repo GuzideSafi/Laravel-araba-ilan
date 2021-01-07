@@ -13,7 +13,7 @@
                             <p class="card-category"> Araba Ekleme Sayfası</p>
                         </div>
                         <div class="card-body">
-                            <div style="width:200px; height: 850px;">
+                            <div style="width:200px; height: 1500px;">
                                 <form action="{{route('admin_car_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <table>
@@ -21,7 +21,7 @@
                                         <tr><h4>Category:</h4> <select name="category_id" id="category_id" style="width: 600px">
                                                 <option value="0" selected="selected">Ana Kategori</option>
                                                 @foreach($datalist as $rs)
-                                                    <option value="{{$rs->id}}" @if ($rs->id==$data->Category_id) selected="selected" @endif>{{$rs->title}}</option>
+                                                    <option value="{{$rs->id}}" @if ($rs->id==$data->Category_id) selected="selected" @endif>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title) }}</option>
                                                 @endforeach
 
 

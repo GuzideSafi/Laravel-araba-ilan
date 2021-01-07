@@ -65,10 +65,14 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('show',[\App\Http\Controllers\Admin\ImageController::class,'show'])->name('admin_image_show');
 
     });
+    Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
+    Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
+
 });
 
 Route::get('/admin/login',[HomeController::class,'login'])->name('admin_login');
 Route::post('/admin/logincheck',[HomeController::class,'logincheck'])->name('admin_logincheck');
+Route::get('/logout',[HomeController::class,'logout'])->name('logout');
 Route::get('/admin/logout',[HomeController::class,'logout'])->name('admin_logout');
 
 
@@ -76,5 +80,5 @@ Route::get('/admin/logout',[HomeController::class,'logout'])->name('admin_logout
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('home.index');
 })->name('dashboard');

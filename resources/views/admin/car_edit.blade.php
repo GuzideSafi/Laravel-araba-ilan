@@ -2,6 +2,12 @@
 
 @section('title','Araba İlanı Düzenle')
 
+@section('javascript')
+    @FilemanagerScript
+
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+@endsection
+
 @section('content')
     <div class="content">
         <div class="container-fluid">
@@ -40,7 +46,15 @@
                                         <tr><h4>Motor Gücü: </h4><input style="width: 600px" id="motorgucu" value="{{$data->motorgucu}}" type="text" name="motorgucu" placeholder="Motor Gücü"/></tr>
                                         <tr><h4>Kilometre: </h4><input style="width: 600px" id="kilometre" value="{{$data->kilometre}}" type="number" name="kilometre" placeholder="Kilometre"/></tr>
                                         <tr><h4>Renk: </h4><input style="width: 600px" id="renk" value="{{$data->renk}}" type="text" name="renk" placeholder="Renk"/></tr>
-                                        <tr><h4>Detail: </h4><input style="width: 600px" id="detail" value="{{$data->detail}}" type="text" name="detail" placeholder="Detail"/></tr>
+                                        <tr><h4>Detail: </h4><textarea id="detail" name="detail"></textarea>{{$data->detail}}</tr>
+                                            <script>
+                                                window.onload = function () {
+                                                    CKEDITOR.replace('detail', {
+                                                        filebrowserBrowseUrl: filemanager.ckBrowseUrl,
+                                                    });
+                                                }
+
+                                            </script>
                                         <tr><h4>Slug: </h4><input style="width: 600px" id="slug" value="{{$data->slug}}" type="text" name="slug" placeholder="Slug"/></tr><br>
                                         <tr><label for="image"><h4>Image:</h4></label><input type="file" name="image" id="image" value="{{$data->image}}" class="form-control">
                                             <br>

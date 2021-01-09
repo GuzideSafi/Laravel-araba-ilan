@@ -141,7 +141,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/Laravel-araba-ilan" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -169,6 +169,9 @@
       <workItem from="1609966903110" duration="1140000" />
       <workItem from="1610017800193" duration="6514000" />
       <workItem from="1610029563926" duration="2161000" />
+      <workItem from="1610043168335" duration="426000" />
+      <workItem from="1610096983216" duration="199000" />
+      <workItem from="1610213559407" duration="144000" />
     </task>
     <servers />
   </component>
@@ -180,10 +183,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610030811447" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610021005286">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610213682231">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610021005286" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610213682231" />
     <state x="518" y="286" key="NewPhpFileDialog" timestamp="1610029955432">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

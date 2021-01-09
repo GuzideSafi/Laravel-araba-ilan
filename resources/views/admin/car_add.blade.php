@@ -1,6 +1,11 @@
 @extends('layouts.admin')
 
 @section('title','Araba Ekle')
+@section('javascript')
+    @FilemanagerScript
+
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+@endsection
 
 @section('content')
     <div class="content">
@@ -41,6 +46,14 @@
                                         <tr><h4>Kilometre: </h4><input style="width: 600px" id="kilometre" type="number" name="kilometre" placeholder="Kilometre"/></tr>
                                         <tr><h4>Renk: </h4><input style="width: 600px" id="renk" type="text" name="renk" placeholder="Renk"/></tr>
                                         <tr><h4>Detail: </h4><textarea id="detail" name="detail"></textarea>
+                                            <script>
+                                                window.onload = function () {
+                                                    CKEDITOR.replace('detail', {
+                                                        filebrowserBrowseUrl: filemanager.ckBrowseUrl,
+                                                    });
+                                                }
+
+                                            </script>
                                         <tr><h4>Slug: </h4><input style="width: 600px" id="slug" type="text" name="slug" placeholder="Slug"/></tr>
                                         <tr><h4>Price: </h4><input style="width: 600px" id="price" type="number" name="price" placeholder="Price"/></tr>
                                         <tr><h4>Image:</h4></label><input type="file" name="image" id="image" class="form-control"></tr>

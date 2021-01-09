@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,13 +25,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::redirect('/anasayfa','/home')->name('anasayfa');
-
-Route::get('/', function () {
-    return view('home.index');
-});
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('/',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home');
@@ -68,6 +68,9 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
     Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
 
+});
+Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name('myprofile');
 });
 
 Route::get('/admin/login',[HomeController::class,'login'])->name('admin_login');

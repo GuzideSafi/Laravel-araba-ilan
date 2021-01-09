@@ -7,6 +7,7 @@
 @endsection
 
 @section('keywords','car, araba, ilan')
+@include('home._slider')
 
 @section('content')
     <main>

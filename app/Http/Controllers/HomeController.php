@@ -2,25 +2,88 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Car;
 use App\Models\Category;
+use App\Models\Image;
+use App\Models\Message;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-
+    public static function getsetting()
+    {
+        return Setting::first();
+    }
     public static function categoryList()
     {
         return Category::where('parent_id','=',0)->with('children')->get();
     }
 
-    public function index()
-    {
-        return view('home.index');
+    public function index(){
+        $setting=Setting::first();
+        $slider=Car::select('id','title','image','slug','price','category_id')->limit(4)->get();
+        $daily=Car::select('id','title','image','slug')->limit(6)->inRandomOrder()->get();
+        $last=Car::select('id','title','image','slug','price','kilometre','yil','motorhacmi','vitestipi','yakittipi','motorgucu','renk')->limit(6)->orderByDesc('id')->get();
+        $picked=Car::select('id','title','image','slug','price')->limit(6)->inRandomOrder()->get();
+        $data=[
+            'setting'=>$setting,
+            'daily'=>$daily,
+            'last'=>$last,
+            'picked'=>$picked,
+            'slider'=>$slider,
+            'page'=>'home'
+
+        ];
+        return view('home.index',$data);
+    }
+    public function car($id,$slug){
+        $setting=Setting::first();
+        $data=Car::find($id);
+        $datalist=Image::where('car_id',$id)->get();
+        return view('home.car_detail',['setting'=>$setting,'data'=>$data,'datalist'=>$datalist]);
+
+    }
+    public function categorycars($id,$slug){
+        $setting=Setting::first();
+        $datalist=Car::where('category_id',$id)->get();
+        $data=Category::find($id);
+
+        return view('home.category_cars',['data'=>$data,'datalist'=>$datalist,'setting'=>$setting]);
+
     }
 
     public function aboutus(){
-        return view('home.about');
+        $setting=Setting::first();
+        return view('home.about',['setting'=>$setting,'page'=>'home']);
+    }
+    public function contact(){
+        $setting=Setting::first();
+        return view('home.contact',['setting'=>$setting,'page'=>'home']);
+    }
+    public function faq(){
+        $setting=Setting::first();
+        return view('home.faq',['setting'=>$setting,'page'=>'home']);
+    }
+    public function references(){
+        $setting=Setting::first();
+        return view('home.references',['setting'=>$setting,'page'=>'home']);
+    }
+    public function sendmessage(Request $request)
+    {
+        $data = new Message();
+
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->subject = $request->input('subject');
+        $data->message = $request->input('message');
+
+
+        $data->save();
+
+        return redirect()->route('contact')->with('success','Mesajınız kaydedilmiştir');
     }
     public function login(){
         return view('admin.login');

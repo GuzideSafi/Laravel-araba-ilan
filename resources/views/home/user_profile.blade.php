@@ -32,45 +32,6 @@
 
                     </ul>
                 </div>
-                <style>
-                    ul {
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 0;
-                        overflow: hidden;
-                        background-color: #34495e;
-                    }
-
-                    li {
-                        display:inline-block;
-                    }
-
-                    li a {
-                        display: block;
-                        color: white;
-                        text-align: center;
-                        padding: 14px 16px;
-                        text-decoration: none;
-                    }
-
-                    li a:hover{
-                        background-color:#f39c12;
-                    }
-
-                    ul li ul {
-                        background-color:#2c3e50;
-                        display:none;
-                        position:absolute;
-                        width:100px
-                    }
-
-                    ul li:hover ul{
-                        display:block;
-                    }
-                    li ul li {
-                        display:block;
-                    }
-                </style>
 
             </div>
             <div class="row">

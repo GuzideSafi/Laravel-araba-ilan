@@ -34,6 +34,12 @@
                 </a>
             </li>
             <li class="nav-item ">
+                <a class="nav-link" href="{{route('admin_message')}}">
+                    <i class="material-icons">library_books</i>
+                    <p>Mesajlar</p>
+                </a>
+            </li>
+            <li class="nav-item ">
                 <a class="nav-link" href="{{route('admin_logout')}}">
                     <i class="material-icons">bubble_chart</i>
                     <p>Logout</p>

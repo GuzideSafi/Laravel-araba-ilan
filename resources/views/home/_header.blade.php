@@ -17,21 +17,22 @@
         <!-- MENU LINKS -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-nav-first">
-                <li class="active"><a href="{{route('home')}}">Home</a></li>
-                <li><a href="cars.html">FAQ</a></li>
-                <li><a href="{{route('aboutus')}}">About Us</a></li>
+                <li class="active"><a href="{{route('home')}}">Ana Sayfa</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Araba İlanları <span class="caret"></span></a>
 
                     <ul class="dropdown-menu">
                         @foreach($parentCategories as $rs)
-                            <li><a href="blog-posts.html">{{$rs->title}}</a></li>
+                            <li><a href="{{route('categorycars',['id'=>$rs->id,'slug'=>$rs->title])}}">{{$rs->title}}</a></li>
                         @endforeach
 
 
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cars.html">FAQ</a></li>
+                <li><a href="{{route('aboutus')}}">Hakkımızda</a></li>
+                <li><a href="{{route('references')}}">Referanslarımız</a></li>
+                <li><a href="{{route('contact')}}">İletişim</a></li>
 
                 @auth
                 <li class="dropdown">

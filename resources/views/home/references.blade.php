@@ -1,18 +1,17 @@
 @extends('layouts.home')
 
-@section('title', 'Hakkımızda')
+@section('title', 'Referanslarımız')
 @section('content')
 
     <section>
         <div class="container">
             <div class="text-center">
-                <h1>Hakkımızda</h1>
+                <h1>Referanslarımız</h1>
 
                 <br>
 
-                <p class="lead">{!! $setting->aboutus !!}</p>
+                <p class="lead">{!! $setting->references !!}</p>
             </div>
         </div>
     </section>
 @endsection
-

@@ -130,6 +130,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/haruncpi/laravel-simple-filemanager" />
     </include_path>
   </component>
   <component name="ProjectId" id="1mbtyxm3JoavdD86y8KDnn6Xwlc" />
@@ -141,8 +142,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/Laravel-araba-ilan" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\php1\arabailanj\resources\views\home" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -172,6 +178,10 @@
       <workItem from="1610043168335" duration="426000" />
       <workItem from="1610096983216" duration="199000" />
       <workItem from="1610213559407" duration="144000" />
+      <workItem from="1610213916908" duration="7032000" />
+      <workItem from="1610267583950" duration="38000" />
+      <workItem from="1610361227013" duration="11280000" />
+      <workItem from="1610385706917" duration="498000" />
     </task>
     <servers />
   </component>
@@ -179,17 +189,17 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610030811447">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610368534287">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610030811447" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610213682231">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610368534287" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610373585489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610213682231" />
-    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1610029955432">
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610373585489" />
+    <state x="518" y="286" key="NewPhpFileDialog" timestamp="1610363184306">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1610029955432" />
+    <state x="518" y="286" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1610363184306" />
   </component>
 </project>

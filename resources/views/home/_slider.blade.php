@@ -1,41 +1,21 @@
 <section id="home">
     <div class="row">
         <div class="owl-carousel owl-theme home-slider">
+            @foreach($slider->take(4) as $rs)
             <div class="item item-first">
                 <div class="caption">
                     <div class="container">
                         <div class="col-md-6 col-sm-12">
-                            <h1>Lorem ipsum dolor sit amet.</h1>
-                            <h3>Voluptas dignissimos esse, explicabo cum fugit eaque, perspiciatis quia ab nisi sapiente delectus eiet.</h3>
-                            <a href="cars.html" class="section-btn btn btn-default">Browse Cars</a>
+                            <h1>{{$rs->title}}</h1>
+                            <h3>{{$rs->yil}}</h3>
+                            <h2>{{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}<br>
+                                {{$rs->price}}.000 ₺</h2>
+                            <a href="{{route('car',['id' => $rs->id,'slug' => $rs->slug])}}" class="section-btn btn btn-default">İlanı İncele</a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="item item-second">
-                <div class="caption">
-                    <div class="container">
-                        <div class="col-md-6 col-sm-12">
-                            <h1>Distinctio explicabo vero animi culpa facere voluptatem.</h1>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, excepturi.</h3>
-                            <a href="cars.html" class="section-btn btn btn-default">Browse Cars</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item item-third">
-                <div class="caption">
-                    <div class="container">
-                        <div class="col-md-6 col-sm-12">
-                            <h1>Efficient Learning Methods</h1>
-                            <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero.</h3>
-                            <a href="cars.html" class="section-btn btn btn-default">Browse Cars</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

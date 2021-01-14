@@ -9,7 +9,7 @@
             </button>
 
             <!-- lOGO TEXT HERE -->
-            <a href="#" class="navbar-brand">Araba Alım Satım İlanı</a>
+            <a href="#" class="navbar-brand">Araba İlan</a>
         </div>
     @php
         $parentCategories=\App\Http\Controllers\HomeController::categoryList();
@@ -29,7 +29,7 @@
 
                     </ul>
                 </li>
-                <li><a href="cars.html">FAQ</a></li>
+                <li><a href="{{route('faq')}}">FAQ</a></li>
                 <li><a href="{{route('aboutus')}}">Hakkımızda</a></li>
                 <li><a href="{{route('references')}}">Referanslarımız</a></li>
                 <li><a href="{{route('contact')}}">İletişim</a></li>
@@ -55,6 +55,7 @@
                         </ul>
                     </li>
                 @endguest
+                <li><a href="{{route('search_page')}}">Ara</a></li>
             </ul>
         </div>
 

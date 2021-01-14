@@ -40,6 +40,12 @@
                 </a>
             </li>
             <li class="nav-item ">
+                <a class="nav-link" href="{{route('admin_faq')}}">
+                    <i class="material-icons">library_books</i>
+                    <p>FAQ</p>
+                </a>
+            </li>
+            <li class="nav-item ">
                 <a class="nav-link" href="{{route('admin_logout')}}">
                     <i class="material-icons">bubble_chart</i>
                     <p>Logout</p>

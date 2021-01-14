@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -32,9 +33,12 @@ Route::redirect('/anasayfa','/home')->name('anasayfa');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/search_page', [HomeController::class, 'search_page'])->name('search_page');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/car/{id}/{slug}', [HomeController::class, 'car'])->name('car');
 Route::get('/categorycars/{id}/{slug}', [HomeController::class, 'categorycars'])->name('categorycars');
+Route::post('/getcar', [HomeController::class, 'getcar'])->name('getcar');
+Route::get('/carlist/{search}', [HomeController::class, 'carlist'])->name('carlist');
 
 
 Route::middleware('auth')->prefix('admin')->group(function (){
@@ -81,9 +85,47 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
     Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
 
+    Route::prefix('faq')->group(function (){
+        Route::get('/',[FaqController::class,'index'])->name('admin_faq');
+        Route::get('create',[FaqController::class,'create'])->name('admin_faq_add');
+        Route::post('store',[FaqController::class,'store'])->name('admin_faq_store');
+        Route::get('edit/{id}',[FaqController::class,'edit'])->name('admin_faq_edit');
+        Route::post('update/{id}',[FaqController::class,'update'])->name('admin_faq_update');
+        Route::get('delete/{id}',[FaqController::class,'destroy'])->name('admin_faq_delete');
+        Route::get('show',[FaqController::class,'show'])->name('admin_faq_show');
+
+    });
 });
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('myprofile');
+});
+
+Route::middleware('auth')->prefix('user')->namespace('user')->group(function () {
+    Route::get('/profile', [UserController::class, 'index'])->name('userprofile');
+
+    Route::prefix('car')->group(function (){
+        Route::get('/',[\App\Http\Controllers\CarController::class,'index'])->name('user_cars');
+        Route::get('create',[\App\Http\Controllers\CarController::class,'create'])->name('user_car_create');
+        Route::post('store',[\App\Http\Controllers\CarController::class,'store'])->name('user_car_store');
+        Route::get('edit/{id}',[\App\Http\Controllers\CarController::class,'edit'])->name('user_car_edit');
+        Route::post('update/{id}',[\App\Http\Controllers\CarController::class,'update'])->name('user_car_update');
+        Route::get('delete/{id}',[\App\Http\Controllers\CarController::class,'destroy'])->name('user_car_delete');
+        Route::get('show',[\App\Http\Controllers\CarController::class,'show'])->name('user_car_show');
+
+    });
+    Route::prefix('image')->group(function (){
+
+        Route::get('create/{car_id}',[\App\Http\Controllers\ImageController::class,'create'])->name('user_image_add');
+        Route::post('store/{car_id}',[\App\Http\Controllers\ImageController::class,'store'])->name('user_image_store');
+        Route::get('delete/{id}/{car_id}',[\App\Http\Controllers\ImageController::class,'destroy'])->name('user_image_delete');
+        Route::get('show',[\App\Http\Controllers\ImageController::class,'show'])->name('user_image_show');
+
+    });
+
+
+
+
+
 });
 
 Route::get('/admin/login',[HomeController::class,'login'])->name('admin_login');

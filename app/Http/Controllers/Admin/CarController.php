@@ -144,7 +144,7 @@ class CarController extends Controller
      */
     public function destroy(Car $car,$id)
     {
-        DB::table('car')->where('id','=',$id)->delete();
+        DB::table('cars')->where('id','=',$id)->delete();
         return redirect()->route('admin_cars');
     }
 }

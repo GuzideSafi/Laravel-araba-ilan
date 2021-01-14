@@ -26,7 +26,7 @@
 
                         <li><a href="#hakkımızda">Mesajlarım</a></li>
 
-                        <li><a href="#Ders">İlanlarım</a></li>
+                        <li><a href="{{route('user_cars')}}">İlanlarım</a></li>
 
                         <li><a href="{{route('logout')}}">Çıkış</a></li>
 

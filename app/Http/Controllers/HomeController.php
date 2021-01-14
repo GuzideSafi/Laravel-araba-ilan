@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Image;
 use App\Models\Message;
 use App\Models\Setting;
@@ -38,6 +39,34 @@ class HomeController extends Controller
         ];
         return view('home.index',$data);
     }
+    public function search_page(){
+        $setting=Setting::first();
+        return view('home.search_page',['setting'=>$setting,'page'=>'home']);
+    }
+    public function getcar(Request $request)
+    {
+        $search=$request->input('search');
+        $count=Car::where('title','like','%'.$search.'%')->get()->count();
+        if($count==1)
+        {
+            $data=Car::where('title','like','%'.$search.'%')->first();
+            return redirect()->route('car',['id'=>$data->id,'slug'=>$data->slug]);
+        }
+        else
+        {
+            return redirect()->route('carlist',['search'=>$search]);
+        }
+
+
+    }
+
+    public function carlist($search){
+        $datalist=Car::where('title','like','%'.$search.'%')->get();
+
+        return view('home.search_cars',['search'=>$search,'datalist'=>$datalist]);
+
+    }
+
     public function car($id,$slug){
         $setting=Setting::first();
         $data=Car::find($id);
@@ -64,7 +93,8 @@ class HomeController extends Controller
     }
     public function faq(){
         $setting=Setting::first();
-        return view('home.faq',['setting'=>$setting,'page'=>'home']);
+        $datalist=Faq::all()->sortBy('position');
+        return view('home.faq',['datalist'=>$datalist,'setting'=>$setting]);
     }
     public function references(){
         $setting=Setting::first();
